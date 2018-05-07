@@ -11,7 +11,11 @@ public class Main {
 
         ArrayList<Task> tasks = new ArrayList<>();
 
-        Scanner sc = new Scanner(System.in).useDelimiter("[,\\s]");
+        String input =  "T1,+R1,0,0,+R2,-R1,-R2\n" +
+                        "T2,+R2,+R1,-R1,-R2\n" +
+                        "T3,0,0,0,+R3,+R3,-R3,-R3";
+
+        Scanner sc = new Scanner(input).useDelimiter("[,\\s]");
         while(sc.hasNextLine()){
             if(sc.hasNext()){
                 String name = sc.next();
@@ -30,11 +34,6 @@ public class Main {
 //
 //            }
 //        }
-
-        Edge e1;
-        e1 = new Edge(new Node("T1"), new Node("T2"));
-        System.out.println(""+ );
-
 
     }
 }

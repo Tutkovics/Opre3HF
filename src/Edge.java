@@ -2,9 +2,9 @@ public class Edge {
     public Node start;
     public Node finish;
 
-    public Edge(Node start, Node finish){
-        this.start = start;
-        this.finish = finish;
+    public Edge(String start, String finish){
+        this.start =  new Node(start);
+        this.finish = new Node(finish);
     }
 
     @Override
@@ -13,9 +13,9 @@ public class Edge {
             return true;
         if (obj == null)
             return false;
-        if (!(obj instanceof Node))
+        if (!(obj instanceof Edge))
             return false;
-        Node other = (Node) obj;
-        return this.start.equals(other.equals(start)) && this.finish.equals(other.equals(finish));
+        Edge other = (Edge) obj;
+        return this.start.equals(other.start) && this.finish.equals(other.finish);
     }
 }
